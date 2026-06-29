@@ -1,0 +1,27 @@
+﻿server:
+  port: 8080
+
+spring:
+  application:
+    name: report-check-backend
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL:jdbc:mysql://localhost:3306/report_check_system?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 100MB
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+
+report-check:
+  upload-dir: ${REPORT_CHECK_UPLOAD_DIR:uploads}
+  jwt-secret: ${REPORT_CHECK_JWT_SECRET:change-this-secret-before-demo-32bytes-minimum}
+  jwt-expire-minutes: ${REPORT_CHECK_JWT_EXPIRE_MINUTES:720}

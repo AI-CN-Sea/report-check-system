@@ -1,0 +1,40 @@
+﻿# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Build output
+target/
+dist/
+backend/target/
+frontend/dist/
+
+# Runtime data and logs
+uploads/
+backend/uploads/
+*.log
+*.err.log
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+application-local.yml
+application-dev.yml
+
+# Generated document/render artifacts
+docs/tmp_render/
+docs/render_check_*/
+docs/rendered_*/
+docs/sample_*.txt
+
+# Python/cache artifacts
+__pycache__/
+tools/__pycache__/
+*.py[cod]
+
+# IDE/system files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
